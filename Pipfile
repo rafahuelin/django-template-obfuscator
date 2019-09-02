@@ -9,6 +9,7 @@ verify_ssl = true
 pep8 = "*"
 autopep8 = "*"
 pylint = "*"
+django = "~=2.0"
 
 [requires]
 python_version = "3.6"

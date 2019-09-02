@@ -35,18 +35,27 @@ Add it to your `INSTALLED_APPS`:
         ...
     )
 
-Add django-template-obfuscator's URL patterns:
+How to use django-template-obfuscator's template tags:
+------------------------------------------------------
 
-.. code-block:: python
+.. code-block:: jinja2
 
-    from django_template_obfuscator import urls as django_template_obfuscator_urls
+    {% extends "base.html" %}
+    {% load static %}
+    {% load obfuscator %}
 
+    <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template tags,
+    then embed it into an Html element with the id "obfuscated", that will will be "deobfuscated"
+    using Javascript  -->
 
-    urlpatterns = [
-        ...
-        url(r'^', include(django_template_obfuscator_urls)),
-        ...
-    ]
+    <div id="obfuscated">
+        {% obfuscate %}
+        Text difficult to scrape.
+        {% endobfuscate %}
+    </div>
+
+    <!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
+    <script src="{% static 'js/deobfuscate.js' %}"></script>
 
 Features
 --------

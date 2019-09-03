@@ -40,19 +40,24 @@ How to use django-template-obfuscator's template tags:
 
 .. code-block:: jinja2
 
-    {% extends "base.html" %}
     {% load static %}
     {% load obfuscator %}
 
     <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template tags,
-    then embed it into an Html element with the id "obfuscated", that will will be "deobfuscated"
+    then embed it into an Html element with the "obfuscated" class, that will will be "deobfuscated"
     using Javascript  -->
 
-    <div id="obfuscated">
+    <p class="obfuscated">
         {% obfuscate %}
         Text difficult to scrape.
         {% endobfuscate %}
-    </div>
+    </p>
+
+    <p class="obfuscated">
+        {% obfuscate %}
+        This text as well.
+        {% endobfuscate %}
+    </p>
 
     <!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
     <script src="{% static 'js/deobfuscate.js' %}"></script>

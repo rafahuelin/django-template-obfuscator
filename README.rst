@@ -27,7 +27,7 @@ Install django-template-obfuscator::
 
 Add it to your `INSTALLED_APPS`:
 
-.. code-block:: python
+.. code-block:: django
 
     INSTALLED_APPS = (
         ...

@@ -10,6 +10,7 @@ pep8 = "*"
 autopep8 = "*"
 pylint = "*"
 django = "~=2.0"
+bumpversion = "*"
 
 [requires]
 python_version = "3.6"

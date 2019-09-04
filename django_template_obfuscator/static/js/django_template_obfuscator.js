@@ -1,4 +1,4 @@
-text_to_deobfuscate = document.getElementById('obfuscated').innerHTML;
+deobfuscate_elements = document.getElementsByClassName('obfuscated');
 
 function rot13(str) {
   var input = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
@@ -11,6 +11,7 @@ function rot13(str) {
     .join('');
 }
 
-converted = rot13(text_to_deobfuscate);
-
-document.getElementById('obfuscated').innerHTML = converted;
+Array.prototype.forEach.call(deobfuscate_elements, function(element) {
+  converted = rot13(element.innerHTML);
+  element.innerHTML = converted;
+});

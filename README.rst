@@ -38,7 +38,7 @@ Add it to your `INSTALLED_APPS`:
 How to use django-template-obfuscator's template tags:
 ------------------------------------------------------
 
-.. code-block:: jinja2
+.. code-block:: django
 
     {% load static %}
     {% load obfuscator %}

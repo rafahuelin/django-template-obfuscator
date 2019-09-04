@@ -46,7 +46,7 @@ history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 setup(
     name='django-template-obfuscator',
-    version=version,
+    version="0.1.0",
     description="""Obfuscates desired content in a Django template in order to be difficult to scrape""",
     long_description=readme + '\n\n' + history,
     author='Rafa Huelin',

@@ -5,6 +5,9 @@
 then embed it into an Html element with the "obfuscated" class, that will will be "deobfuscated"
 using Javascript  -->
 
+<!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
+<link rel="stylesheet" href="{% static 'css/django_template_obfuscator.css' %}">
+
 <p class="obfuscated">
   {% obfuscate %}
   Text difficult to scrape.
@@ -17,5 +20,5 @@ using Javascript  -->
   {% endobfuscate %}
 </p>
 
-<!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
+<!-- CSS that prevents the user from copying the text -->
 <script src="{% static 'js/django_template_obfuscator.js' %}"></script>

@@ -1,21 +1,23 @@
 {% load static %}
 {% load obfuscator %}
 
+<link rel="stylesheet" href="{% static 'css/django_template_obfuscator.css' %}">
+
 <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template tags,
 then embed it into an Html element with the "obfuscated" class, that will will be "deobfuscated"
 using Javascript  -->
 
-<p class="obfuscated">
+<div class="obfuscated">
     {% obfuscate %}
     Text difficult to scrape.
     {% endobfuscate %}
-</p>
+</div>
 
-<p class="obfuscated">
+<div class="obfuscated">
     {% obfuscate %}
     This text as well.
     {% endobfuscate %}
-</p>
+</div>
 
 <!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
 <script src="{% static 'js/django_template_obfuscator.js' %}"></script>

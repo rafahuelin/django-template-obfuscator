@@ -60,7 +60,7 @@ How to use django-template-obfuscator's template tags:
     </p>
 
     <!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
-    <script src="{% static 'js/deobfuscate.js' %}"></script>
+    <script src="{% static 'js/django_template_obfuscator.js' %}"></script>
 
 Features
 --------

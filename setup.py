@@ -49,6 +49,7 @@ setup(
     version=version,
     description="""Obfuscates desired content in a Django template in order to be difficult to scrape""",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/x-rst',
     author='Rafa Huelin',
     author_email='rafahuelin@gmail.com',
     url='https://github.com/rafahuelin/django-template-obfuscator',

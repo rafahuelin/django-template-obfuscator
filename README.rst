@@ -47,6 +47,9 @@ How to use django-template-obfuscator's template tags:
     then embed it into an Html element with the "obfuscated" class, that will will be "deobfuscated"
     using Javascript  -->
 
+    <!-- CSS file that will avoid the user to copy the content in obfuscated class -->
+    <link rel="stylesheet" href="{% static 'css/django_template_obfuscator.css' %}">
+
     <p class="obfuscated">
         {% obfuscate %}
         Text difficult to scrape.
@@ -59,7 +62,7 @@ How to use django-template-obfuscator's template tags:
         {% endobfuscate %}
     </p>
 
-    <!-- Javascript file that will deobfuscate the obfuscated text by the template tags -->
+    <!-- JS in charge of deobfuscation, making the content understandable to the web's user -->
     <script src="{% static 'js/django_template_obfuscator.js' %}"></script>
 
 Features

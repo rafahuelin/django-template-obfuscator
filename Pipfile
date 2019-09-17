@@ -14,6 +14,7 @@ twine = "*"
 wheel = "*"
 setuptools = "*"
 rstcheck = "*"
+selenium = "*"
 
 [requires]
 python_version = "3.6"

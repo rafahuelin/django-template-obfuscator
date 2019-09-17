@@ -43,9 +43,9 @@ How to use django-template-obfuscator's template tags:
     {% load static %}
     {% load obfuscator %}
 
-    <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template tags,
-    then embed it into an Html element with the "obfuscated" class, that will will be "deobfuscated"
-    using Javascript  -->
+    <!-- Place text to encode in between the {% obfuscate %} and {% endobfuscate %} template
+    tags, then embed it into an Html element with the "obfuscated" class, that will will be
+    "deobfuscated" using Javascript  -->
 
     <!-- CSS file that will avoid the user to copy the content in obfuscated class -->
     <link rel="stylesheet" href="{% static 'css/django_template_obfuscator.css' %}">
@@ -78,8 +78,9 @@ Does the code actually work?
 ::
 
     source <YOURVIRTUALENV>/bin/activate
-    (myenv) $ pip install tox
-    (myenv) $ tox
+    (myenv) $ pip install selenium
+    (myenv) $ python django_template_obfuscator/tests.py
+
 
 Credits
 -------

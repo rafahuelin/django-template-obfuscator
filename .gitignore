@@ -51,3 +51,6 @@ docs/_build
 
 # Virtual Environment
 .venv
+
+# Selenium log
+geckodriver.log

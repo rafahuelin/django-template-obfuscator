@@ -9,7 +9,7 @@ verify_ssl = true
 pep8 = "*"
 autopep8 = "*"
 pylint = "*"
-django = "~=2.0"
+django = "~=2.2"
 twine = "*"
 wheel = "*"
 setuptools = "*"
